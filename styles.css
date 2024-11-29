@@ -1,0 +1,130 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #141e30;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.background-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(20, 30, 48, 0.7), rgba(36, 59, 85, 0.7));
+  clip-path: circle(25% at 50% 50%);
+  animation: morph 8s infinite;
+}
+
+@keyframes morph {
+  0%, 100% {
+    clip-path: circle(25% at 50% 50%);
+  }
+  50% {
+    clip-path: circle(75% at 50% 50%);
+  }
+}
+
+.login-box {
+  position: relative;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(8px);
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 28px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  outline: none;
+  transition: 0.4s;
+}
+
+.input-box input:focus {
+  border-color: #ffdd59;
+}
+
+.input-box label {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+  top: -20px;
+  left: 10px;
+  font-size: 12px;
+  color: #ffdd59;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #141e30;
+  background: #ffdd59;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #ffdd59;
+  box-shadow: 0 0 10px #ffdd59, 0 0 20px #ffdd59;
+}
+
+.text {
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.text a {
+  color: #ffdd59;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.text a:hover {
+  text-decoration: underline;
+}
